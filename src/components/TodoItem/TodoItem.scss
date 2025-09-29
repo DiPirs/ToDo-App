@@ -1,0 +1,20 @@
+.toDoList__item {
+	display: flex;
+	gap: 0.625em;
+	align-items: center;
+	height: 30px;
+}
+
+.item__checkbox {
+	width: 1.25rem;
+	height: 1.25rem;
+}
+
+.item__button {
+	background: none;
+	border: none;
+}
+
+.item__taskText {
+	flex-grow: 1;
+}

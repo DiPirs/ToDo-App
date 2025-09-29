@@ -15,7 +15,7 @@
 	}
 }
 
-.item__button {
+.nav__button {
 	display: flex;
 	align-items: center;
 	gap: 1em;
@@ -32,6 +32,6 @@
 	}
 }
 
-.active {
+.activeButtonNav {
 	background-color: $color-grey-light;
 }

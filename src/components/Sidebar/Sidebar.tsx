@@ -8,9 +8,9 @@ export default function Sidebar() {
 			<img className='sidebar__logo' src={logoIconUrl} alt='Логотип' />
 			<nav className='sidebar__nav'>
 				<ul className='nav__list'>
-					<li className='list__item'>
-						<button className='item__button active'>
-							<img src={taskIconUrl} alt='Задания' className='item__img' />
+					<li className='nav__item'>
+						<button className='nav__button activeButtonNav'>
+							<img src={taskIconUrl} alt='Задания' className='nav__img' />
 							Tasks
 						</button>
 					</li>
