@@ -4,7 +4,12 @@ import './TodoItem.scss'
 import deleteIconUrl from '/delete.svg'
 import editingIconUrl from '/editing.svg'
 
-export default function TodoItem({ task, onEdit, onDelete }: ITodoItemProps) {
+export default function TodoItem({
+	task,
+	onEdit,
+	onDelete,
+	onToggleCompletion,
+}: ITodoItemProps) {
 	const setTag = (task: ITask) => {
 		if (task.type === 'toDo') return 'Need to do'
 		if (task.type === 'inProgress') return 'In process'
@@ -18,7 +23,7 @@ export default function TodoItem({ task, onEdit, onDelete }: ITodoItemProps) {
 				className='item__checkbox'
 				type='checkbox'
 				checked={task.isCompleted}
-				readOnly
+				onChange={onToggleCompletion}
 			/>
 			<span className='item__taskText'>{task.text}</span>
 			<span className={`item__taskTag taskTag__${task.type}`}>

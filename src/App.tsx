@@ -36,6 +36,20 @@ export default function App() {
 		setTasks(prevTasks => prevTasks.filter(task => task.id !== id))
 	}
 
+	const toggleTaskCompletion = (id: number) => {
+		setTasks(prevTasks =>
+			prevTasks.map(task =>
+				task.id === id
+					? {
+							...task,
+							isCompleted: !task.isCompleted,
+							type: !task.isCompleted ? 'done' : 'toDo',
+					  }
+					: task
+			)
+		)
+	}
+
 	return (
 		<div className='page'>
 			<Sidebar />
@@ -43,7 +57,11 @@ export default function App() {
 				<h1>My Tasks</h1>
 				<TodoForm onAddTask={addTask} />
 				<hr />
-				<TodoList tasks={tasks} onDeleteTask={deleteTask} />
+				<TodoList
+					tasks={tasks}
+					onDeleteTask={deleteTask}
+					onToggleTaskCompletion={toggleTaskCompletion}
+				/>
 			</main>
 		</div>
 	)

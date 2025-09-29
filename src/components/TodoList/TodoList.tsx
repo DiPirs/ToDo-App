@@ -4,7 +4,11 @@ import type { ITodoListProps } from '../../types/todoProps.types'
 import TodoItem from '../TodoItem/TodoItem'
 import './TodoList.scss'
 
-export default function TodoList({ tasks, onDeleteTask }: ITodoListProps) {
+export default function TodoList({
+	tasks,
+	onDeleteTask,
+	onToggleTaskCompletion,
+}: ITodoListProps) {
 	const [filter, setFilter] = useState<TTypeTask>('toDo')
 
 	const filteredTasks = tasks.filter(task => {
@@ -49,6 +53,7 @@ export default function TodoList({ tasks, onDeleteTask }: ITodoListProps) {
 						task={task}
 						onEdit={() => console.log('Edit task:', task.id)}
 						onDelete={() => onDeleteTask(task.id)}
+						onToggleCompletion={() => onToggleTaskCompletion(task.id)}
 					/>
 				))}
 			</ul>
