@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .toDoList__item {
 	display: flex;
 	gap: 0.625em;
@@ -17,4 +19,28 @@
 
 .item__taskText {
 	flex-grow: 1;
+	font-size: 1.125em;
+}
+
+.item__taskTag {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 105px;
+	padding: 5px;
+	border-radius: 10px;
+}
+.taskTag__toDo {
+	color: $color-red;
+	background-color: $color-red-light;
+}
+
+.taskTag__inProgress {
+	color: $color-yellow;
+	background-color: $color-yellow-light;
+}
+
+.taskTag__done {
+	color: $color-green;
+	background-color: $color-green-light;
 }

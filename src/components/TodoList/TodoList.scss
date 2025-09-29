@@ -20,6 +20,12 @@
 	}
 }
 
+.toDoList {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
 .activeButtonList {
 	color: $color-primary;
 	background-color: $color-accent;

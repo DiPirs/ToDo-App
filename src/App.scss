@@ -1,5 +1,11 @@
+@import './styles/variables.scss';
+
 .page {
 	display: flex;
+}
+
+hr {
+	border: 1px solid $color-border-light;
 }
 
 .main {
