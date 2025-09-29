@@ -11,15 +11,16 @@ export default function TodoItem({
 	onToggleCompletion,
 }: ITodoItemProps) {
 	const setTag = (task: ITask) => {
-		if (task.type === 'toDo') return 'Need to do'
-		if (task.type === 'inProgress') return 'In process'
-		if (task.type === 'done') return 'Well done'
+		if (task.type === 'toDo') return 'need to do'
+		if (task.type === 'inProcess') return 'in process'
+		if (task.type === 'done') return 'well done'
 		return 'none tag'
 	}
 
 	return (
 		<li className='toDoList__item'>
 			<input
+				name='itemStatus'
 				className='item__checkbox'
 				type='checkbox'
 				checked={task.isCompleted}

@@ -22,18 +22,20 @@ export default function TodoForm({ onAddTask }: ITodoFormProps) {
 			<h2 className='formNewTask__title'>Input new task</h2>
 			<input
 				type='text'
+				name='textNewTask'
 				className='formNewTask__input'
 				placeholder='Input new task...'
 				value={text}
 				onChange={e => setText(e.target.value)}
 			/>
 			<select
+				name='selectTaskType'
 				className='formNewTask__selectType'
 				value={type}
 				onChange={e => setType(e.target.value as ITask['type'])}
 			>
-				<option value='toDo'>To Do</option>
-				<option value='inProgress'>In progress</option>
+				<option value='toDo'>Need to do</option>
+				<option value='inProcess'>In process</option>
 			</select>
 			<button className='formNewTask__button'>
 				<img src={addIconUrl} alt='Добавить задачу' />

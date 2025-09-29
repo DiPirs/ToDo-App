@@ -13,7 +13,7 @@ export default function TodoList({
 
 	const filteredTasks = tasks.filter(task => {
 		if (filter === 'toDo') return true
-		if (filter === 'inProgress') return task.type === 'inProgress'
+		if (filter === 'inProcess') return task.type === 'inProcess'
 		if (filter === 'done') return task.isCompleted
 		return false
 	})
@@ -31,11 +31,11 @@ export default function TodoList({
 				</button>
 				<button
 					className={`toDoList_title ${
-						filter === 'inProgress' ? 'activeButtonList' : ''
+						filter === 'inProcess' ? 'activeButtonList' : ''
 					}`}
-					onClick={() => setFilter('inProgress')}
+					onClick={() => setFilter('inProcess')}
 				>
-					In Progress {tasks.filter(task => task.type === 'inProgress').length}
+					In Progress {tasks.filter(task => task.type === 'inProcess').length}
 				</button>
 				<button
 					className={`toDoList_title ${

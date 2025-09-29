@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.scss'
 import Sidebar from './components/Sidebar/Sidebar'
-import TodoForm from './components/TodoForm/TodoForm'
+import Header from './components/Header/Header'
 import TodoList from './components/TodoList/TodoList'
 import type { ITask } from './types/task.types'
 
@@ -54,14 +54,14 @@ export default function App() {
 		<div className='page'>
 			<Sidebar />
 			<main className='main'>
-				<h1>My Tasks</h1>
-				<TodoForm onAddTask={addTask} />
-				<hr />
-				<TodoList
-					tasks={tasks}
-					onDeleteTask={deleteTask}
-					onToggleTaskCompletion={toggleTaskCompletion}
-				/>
+				<Header AddTask={addTask} />
+				<div className='content'>
+					<TodoList
+						tasks={tasks}
+						onDeleteTask={deleteTask}
+						onToggleTaskCompletion={toggleTaskCompletion}
+					/>
+				</div>
 			</main>
 		</div>
 	)

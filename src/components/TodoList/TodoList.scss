@@ -12,11 +12,12 @@
 	border-radius: 10px;
 	background: none;
 	border: 1px solid $color-border-light;
+	transition: 0.25s ease-in-out;
 
 	&:hover {
 		color: $color-primary;
-		background-color: $color-accent-light;
 		border: 1px solid $color-accent-light;
+		background-color: $color-accent-light;
 	}
 }
 
@@ -28,5 +29,6 @@
 
 .activeButtonList {
 	color: $color-primary;
+	border: 1px solid $color-accent;
 	background-color: $color-accent;
 }
