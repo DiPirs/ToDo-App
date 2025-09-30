@@ -30,7 +30,7 @@
 
 .formNewTask__inputWrapper {
 	display: flex;
-	gap: 5px;
+	gap: 0.313rem;
 	flex-direction: column;
 	flex-grow: 1;
 	height: 100%;
@@ -52,7 +52,7 @@
 
 .formNewTask__selectWrapper {
 	display: flex;
-	gap: 5px;
+	gap: 0.313rem;
 	flex-direction: column;
 	height: 3.938em;
 
@@ -61,8 +61,8 @@
 		border: 2px solid $color-border-light;
 		border-radius: 10px;
 		appearance: none;
-		padding: 5px;
-		padding-right: 15px;
+		padding: 0.313rem;
+		padding-right: 0.938rem;
 		background-image: url('/arrow.svg');
 		background-size: 12px;
 		background-repeat: no-repeat;

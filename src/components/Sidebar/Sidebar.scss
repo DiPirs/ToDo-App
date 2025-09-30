@@ -3,24 +3,24 @@
 .sidebar {
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
-	padding: 10px 0;
+	gap: 0.625rem;
+	padding: 0.625rem 0;
 	min-height: 100vh;
 	background-color: $color-grey;
 
 	&__logo {
 		width: 185px;
 		height: 50px;
-		padding: 0 10px;
+		padding: 0 0.625rem;
 	}
 }
 
 .nav__button {
 	display: flex;
 	align-items: center;
-	gap: 1em;
+	gap: 1rem;
 	width: 100%;
-	padding: 10px;
+	padding: 0.625rem;
 	font-size: 1.125rem;
 	font-weight: bold;
 	background: none;

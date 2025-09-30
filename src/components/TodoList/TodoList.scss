@@ -2,13 +2,13 @@
 
 .choose__list {
 	display: flex;
-	gap: 20px;
+	gap: 1.25rem;
 	flex-direction: row;
 }
 
 .toDoList_title {
-	padding: 10px;
-	font-size: 16px;
+	padding: 0.625rem;
+	font-size: 1rem;
 	border-radius: 10px;
 	background: none;
 	border: 1px solid $color-border-light;
