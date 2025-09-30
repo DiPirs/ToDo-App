@@ -26,7 +26,7 @@ export default function TodoItem({
 				checked={task.isCompleted}
 				onChange={onToggleCompletion}
 			/>
-			<span className='item__taskText'>{task.text}</span>
+			<span className={`item__taskText item__${task.type}`}>{task.text}</span>
 			<span className={`item__taskTag taskTag__${task.type}`}>
 				{setTag(task)}
 			</span>

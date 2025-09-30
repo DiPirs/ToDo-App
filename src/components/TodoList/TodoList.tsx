@@ -12,7 +12,12 @@ export default function TodoList({
 }: ITodoListProps) {
 	const [filter, setFilter] = useState<TTypeTask>('toDo')
 
-	const filteredTasks = tasks.filter(task => {
+	const sortedTasks = [...tasks].sort((a, b) => {
+		const order = { toDo: 1, inProcess: 2, done: 3 }
+		return order[a.type] - order[b.type]
+	})
+
+	const filteredTasks = sortedTasks.filter(task => {
 		if (filter === 'toDo') return true
 		if (filter === 'inProcess') return task.type === 'inProcess'
 		if (filter === 'done') return task.isCompleted

@@ -46,7 +46,6 @@ export default function EditTaskModal({
 						>
 							<option value='toDo'>To Do</option>
 							<option value='inProcess'>In Process</option>
-							<option value='done'>Done</option>
 						</select>
 					</div>
 					<div className='form__actions'>
