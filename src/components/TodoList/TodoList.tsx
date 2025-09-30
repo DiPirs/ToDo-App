@@ -35,7 +35,7 @@ export default function TodoList({
 					}`}
 					onClick={() => setFilter('inProcess')}
 				>
-					In Progress {tasks.filter(task => task.type === 'inProcess').length}
+					In Process {tasks.filter(task => task.type === 'inProcess').length}
 				</button>
 				<button
 					className={`toDoList_title ${

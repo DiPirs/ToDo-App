@@ -2,49 +2,12 @@
 
 .formNewTask {
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	align-items: end;
 	gap: 0.938em;
-	height: 40px;
 
 	&__title {
+		align-self: center;
 		margin: 0;
-	}
-
-	&__input {
-		flex-grow: 1;
-		height: 100%;
-		padding: 0.625rem;
-		font-size: 1.25rem;
-		border: 2px solid $color-border-light;
-		border-radius: 10px;
-		transition: 0.2s ease-in-out;
-
-		&:focus {
-			border-color: $color-accent;
-			outline: 1px solid $color-accent;
-			outline-offset: 0px;
-		}
-	}
-
-	&__selectType {
-		height: 100%;
-		border: 2px solid $color-border-light;
-		border-radius: 10px;
-		appearance: none;
-		padding: 5px;
-		padding-right: 30px;
-		background-image: url('/arrow.svg');
-		background-size: 12px;
-		background-repeat: no-repeat;
-		background-position: right 10px center;
-		transition: 0.2s ease-in-out;
-
-		&:focus {
-			border-color: $color-accent;
-			outline: 1px solid $color-accent;
-			outline-offset: 0px;
-		}
 	}
 
 	&__button {
@@ -63,4 +26,62 @@
 			background-color: $color-accent-light;
 		}
 	}
+}
+
+.formNewTask__inputWrapper {
+	display: flex;
+	gap: 5px;
+	flex-direction: column;
+	flex-grow: 1;
+	height: 100%;
+
+	.inputWrapper__input {
+		padding: 0.625rem;
+		font-size: 1.15rem;
+		border: 2px solid $color-border-light;
+		border-radius: 10px;
+		transition: 0.2s ease-in-out;
+
+		&:focus {
+			border-color: $color-accent;
+			outline: 1px solid $color-accent;
+			outline-offset: 0px;
+		}
+	}
+}
+
+.formNewTask__selectWrapper {
+	display: flex;
+	gap: 5px;
+	flex-direction: column;
+	height: 3.938em;
+
+	.selectWrapper__selectType {
+		height: 100%;
+		border: 2px solid $color-border-light;
+		border-radius: 10px;
+		appearance: none;
+		padding: 5px;
+		padding-right: 15px;
+		background-image: url('/arrow.svg');
+		background-size: 12px;
+		background-repeat: no-repeat;
+		background-position: right 5px center;
+		transition: 0.2s ease-in-out;
+
+		white-space: nowrap;
+		text-overflow: ellipsis;
+
+		&:focus {
+			border-color: $color-accent;
+			outline: 1px solid $color-accent;
+			outline-offset: 0px;
+		}
+	}
+}
+
+.inputWrapper__label,
+.selectWrapper__label {
+	color: $color-grey-light;
+	font-size: 0.813em;
 }
