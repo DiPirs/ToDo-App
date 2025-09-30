@@ -26,7 +26,22 @@
 		gap: 2px;
 
 		.field-label {
-			font-size: 16px;
+			font-size: 18px;
+		}
+
+		.field-change {
+			padding: 0.625rem;
+			font-size: 1.15rem;
+			border: 2px solid $color-border-light;
+			border-radius: 10px;
+			transition: 0.2s ease-in-out;
+			appearance: none;
+
+			&:focus {
+				border-color: $color-accent;
+				outline: 1px solid $color-accent;
+				outline-offset: 0px;
+			}
 		}
 	}
 
@@ -41,6 +56,7 @@
 			border: none;
 			border-radius: 5px;
 			background-color: $color-accent;
+			font-size: 16px;
 			transition: 0.25s ease-in-out;
 
 			&:hover {
