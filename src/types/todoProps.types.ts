@@ -4,6 +4,7 @@ export interface ITodoListProps {
 	tasks: ITask[]
 	onDeleteTask: (id: number) => void
 	onToggleTaskCompletion: (id: number) => void
+	onEditTask: (task: ITask) => void
 }
 
 export interface ITodoItemProps {

@@ -8,6 +8,7 @@ export default function TodoList({
 	tasks,
 	onDeleteTask,
 	onToggleTaskCompletion,
+	onEditTask,
 }: ITodoListProps) {
 	const [filter, setFilter] = useState<TTypeTask>('toDo')
 
@@ -51,7 +52,7 @@ export default function TodoList({
 					<TodoItem
 						key={task.id}
 						task={task}
-						onEdit={() => console.log('Edit task:', task.id)}
+						onEdit={() => onEditTask(task)}
 						onDelete={() => onDeleteTask(task.id)}
 						onToggleCompletion={() => onToggleTaskCompletion(task.id)}
 					/>

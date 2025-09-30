@@ -1,8 +1,8 @@
 import type { ITask } from '../../types/task.types'
-import type { ITodoItemProps } from '../../types/todoProps.types'
 import './TodoItem.scss'
 import deleteIconUrl from '/delete.svg'
 import editingIconUrl from '/editing.svg'
+import type { ITodoItemProps } from '../../types/todoProps.types'
 
 export default function TodoItem({
 	task,

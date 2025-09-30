@@ -1,0 +1,61 @@
+@import '../../styles/variables.scss';
+
+.modal-overlay {
+	margin: 10px;
+}
+
+.modal-content {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	width: 250px;
+}
+
+.modal__title {
+	margin: 0;
+}
+
+.modal__form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	.form__field {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+
+		.field-label {
+			font-size: 16px;
+		}
+	}
+
+	.form__actions {
+		display: flex;
+		justify-content: space-between;
+
+		&-button {
+			width: 70px;
+			padding: 5px;
+			color: $color-primary;
+			border: none;
+			border-radius: 5px;
+			background-color: $color-accent;
+			transition: 0.25s ease-in-out;
+
+			&:hover {
+				background-color: $color-accent-light;
+			}
+		}
+
+		.cancel {
+			color: $color-grey;
+			background-color: $color-border-light;
+
+			&:hover {
+				color: $color-border-light;
+				background-color: $color-grey-light;
+			}
+		}
+	}
+}
