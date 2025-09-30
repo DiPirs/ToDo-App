@@ -19,13 +19,16 @@ export default function TodoItem({
 
 	return (
 		<li className='toDoList__item'>
-			<input
-				name='itemStatus'
-				className='item__checkbox'
-				type='checkbox'
-				checked={task.isCompleted}
-				onChange={onToggleCompletion}
-			/>
+			<label className='custom-checkbox'>
+				<input
+					name='itemStatus'
+					className='item__checkbox'
+					type='checkbox'
+					checked={task.isCompleted}
+					onChange={onToggleCompletion}
+				/>
+				<span className='checkmark'></span>
+			</label>
 			<span className={`item__taskText item__${task.type}`}>{task.text}</span>
 			<span className={`item__taskTag taskTag__${task.type}`}>
 				{setTag(task)}
