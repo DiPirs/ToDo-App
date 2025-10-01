@@ -10,19 +10,18 @@ export default function TodoList({
 	onToggleTaskCompletion,
 	onEditTask,
 }: ITodoListProps) {
-	const [filter, setFilter] = useState<TTypeTask>('toDo')
+	const [filter, setFilter] = useState<TTypeTask>('')
 
 	const sortedTasks = [...tasks].sort((a, b) => {
-		const order = { all: 0, toDo: 1, inProcess: 2, done: 3 }
+		const order = { '': 0, toDo: 1, inProcess: 2, done: 3 }
 		return order[a.type] - order[b.type]
 	})
 
 	const filteredTasks = sortedTasks.filter(task => {
-		if (filter === 'all') return true
 		if (filter === 'toDo') return task.type === 'toDo'
 		if (filter === 'inProcess') return task.type === 'inProcess'
 		if (filter === 'done') return task.isCompleted
-		return false
+		return true
 	})
 
 	return (
@@ -30,9 +29,9 @@ export default function TodoList({
 			<div className='choose__list'>
 				<button
 					className={`toDoList_title ${
-						filter === 'all' ? 'activeButtonList' : ''
+						filter === '' ? 'activeButtonList' : ''
 					}`}
-					onClick={() => setFilter('all')}
+					onClick={() => setFilter('')}
 				>
 					All Tasks {tasks.length}
 				</button>

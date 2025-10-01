@@ -1,4 +1,4 @@
-export type TTypeTask = 'all' | 'toDo' | 'inProcess' | 'done'
+export type TTypeTask = '' | 'toDo' | 'inProcess' | 'done'
 
 export interface ITask {
 	id: number

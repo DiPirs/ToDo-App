@@ -1,6 +1,6 @@
 import type { ITask } from './task.types'
 
-export interface EditTaskModalProps {
+export interface IEditTaskModalProps {
 	task: ITask
 	onClose: () => void
 	onUpdateTask: (updatedTask: ITask) => void

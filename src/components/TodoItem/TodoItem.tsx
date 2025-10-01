@@ -3,6 +3,7 @@ import './TodoItem.scss'
 import deleteIconUrl from '/delete.svg'
 import editingIconUrl from '/editing.svg'
 import type { ITodoItemProps } from '../../types/todoProps.types'
+import Checkbox from '../Checkbox/Checkbox'
 
 export default function TodoItem({
 	task,
@@ -19,16 +20,12 @@ export default function TodoItem({
 
 	return (
 		<li className='toDoList__item'>
-			<label className='custom-checkbox'>
-				<input
-					name='itemStatus'
-					className='item__checkbox'
-					type='checkbox'
-					checked={task.isCompleted}
-					onChange={onToggleCompletion}
-				/>
-				<span className='checkmark'></span>
-			</label>
+			<Checkbox
+				name='itemStatus'
+				className='item__checkbox'
+				checked={task.isCompleted}
+				onChangeFn={onToggleCompletion}
+			/>
 			<span className={`item__taskText item__${task.type}`}>{task.text}</span>
 			<span className={`item__taskTag taskTag__${task.type}`}>
 				{setTag(task)}

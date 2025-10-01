@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import './EditTaskModal.scss'
 import type { TTypeTask } from '../../types/task.types'
-import type { EditTaskModalProps } from '../../types/editTaskProps.types'
+import type { IEditTaskModalProps } from '../../types/editTaskProps.types'
 
 export default function EditTaskModal({
 	task,
 	onClose,
 	onUpdateTask,
-}: EditTaskModalProps) {
+}: IEditTaskModalProps) {
 	const [text, setText] = useState(task.text)
 	const [type, setType] = useState<TTypeTask>(task.type)
 
